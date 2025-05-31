@@ -1,0 +1,10 @@
+Implementación código de un sensor con un led de alerta:
+
+Entradas y salidas Raspberry Pi Pico:
+- GP3 --> Trigger(SRF-05)
+- GP2 --> Echo(SRF-05)
+- GND --> GND(SRF-05)
+
+- GP15 --> Ánodo(LED)
+- GP3 --> Cátodo(LED)
+

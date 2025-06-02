@@ -1,7 +1,7 @@
 from machine import Pin, time_pulse_us
 import time
 
-# Configuración de pines
+# Configuración inicial
 TRIGGER_PIN = 3
 ECHO_PIN = 2
 LED_ALERTA_PIN = 15
@@ -10,7 +10,6 @@ trigger = Pin(TRIGGER_PIN, Pin.OUT)
 echo = Pin(ECHO_PIN, Pin.IN)
 led_alerta = Pin(LED_ALERTA_PIN, Pin.OUT)
 
-# Parámetros del tanque
 ALTURA_TANQUE_CM = 12
 UMBRAL_VACIO_PORC = 10
 
@@ -52,10 +51,10 @@ while True:
         
         if porcentaje <= UMBRAL_VACIO_PORC:
             led_alerta.value(1)
-            print("⚠️ Tanque vacío o casi vacío. No se puede continuar el proceso.")
+            print("Tanque vacío o casi vacío. No se puede continuar el proceso.")
         else:
             led_alerta.value(0)
-            print("✅ Tanque con suficiente pintura.")
+            print("Tanque con suficiente pintura.")
 
     print("----------------------------")
     time.sleep(1)

@@ -12,19 +12,16 @@ En el proyecto integrador se hace uso de sensores ultrasonido para poder revisar
 Para la implementación de los sensores se realizaron códigos en micropython para poder integrarlos en node-red, de esta forma poder realizar el control de los niveles de cada tanque, mostrando el porcentaje en que se encuentra cada uno y así ayudando a identificar si cuenta con suficiente pintura para realizar la mezcla o mostrando una alerta deque el tanque se encuentra vacío o no recibe señal.
 
 ## Código 1, Implementación de 1 sensor Ultrasonido
-Referente al código identificado por nombre "[1_Sensor_Probado](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/1_Sensor_Probado.py)".
+Código identificado por nombre "[1_Sensor_Probado](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/1_Sensor_Probado.py)".
 
 En este código se realiza la implementación de un sensor ultrasonido el cual se conecta a una fuente de 5 Voltios, resistencias de protección y a la Raspberry Pi Pico, la cual recibe la señal del sensor y la analiza para poder mostrar el valor del porcentaje en el que el tanque se encuentra; de la Raspberry se utilizaron pines para poder lnelazar los diferentes componentes, por ello en el siguiente archivo se puede apreciar los pines que se asignaron y la conexión con el sensor y con un led de advertencia: "[In_Out_1_Sensor_Probado](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/In_Out_1_Sensor_Probado.txt)".
 
 Este código se probó el funcionamiento obteniendo un satisfactorio resultado, para ello se muestra prueba de ello en este [Video](https://youtube.com/shorts/C4vVS9Mlb_U?feature=share).
 
 
-
 ## Código 2, Implementación de 5 sensores simultaneos
-Referente al código identificado por nombre "[5_Sensores](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/5_sensores.py)".
+Para el código identificado por nombre "[5_Sensores](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/5_sensores.py)".
 
-"[In_Out_5_Sensores](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/In_Out_5_Sensores.txt)".
+Tomando en cuenta el primer código donde se implementó un sensor de ultrasonido, se modifica y se añaden 4 sensores para un total de 5 siendo 1 por tanque, de esta forma se parte desde un código que ya se confirmó su correcto funcionamiento y se adapta al proyecto integrador. Siguiendo la lógica del primer código implementado, se desarrolla el diagrama de flujo teniendo en cuenta la adición de los demás sensores [Diagrama_flujo](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/ba4990d18dcaff79a994d7deb597944296226b2c/Diagrama_flujo.md).
 
-## Código 3
-
-## Diagrama Ultrasonido
+Adicionalmente, la descripción del código donde se desglosa y se evidencia cada parte de su funcionamiento se encuentra en el siguiente archivo "[Descripción_código_5_sensores](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/ba4990d18dcaff79a994d7deb597944296226b2c/Descripci%C3%B3n_c%C3%B3digo_5_sensores.md)"; así como el detalle de los pines utilizados y de los mensajes de advertencia que muestra el código "[In_Out_5_Sensores](https://github.com/ECCI-Sistemas-Digitales-3/lab06-proyecto-2da-entrega-g2/blob/af7a38a30919af737fd60ace09a22fc8ea263fd5/In_Out_5_Sensores.txt)".

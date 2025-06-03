@@ -1,0 +1,30 @@
+Lectura de 5 sensores SRF05 conectados a la Raspberry Pi Pico.
+
+Identificación de sensores:
+- C: Cyan
+- M: Magenta
+- Y: Yellow
+- K: Black
+- W: White
+
+Alertas:
+- Si un sensor no está conectado:
+	Distancia = 0, Porcentaje = 0
+	Mensaje: "No se recibe señal del sensor <color>"
+
+- Si el sensor recibe una lectura muy cercana: 
+	Mensaje: "Error de medición"
+
+- Si el tanque está vacio:
+	Distancia: Valor leído, Porcentaje: Valor leído
+	Mensaje: "Tanque sin pintura, por favor rellene"
+
+Activa un LED por cada color si el tanque está vacío o si no hay señal.
+
+Pines usados en la Raspberry Pi Pico:
+Color	TRIG	ECHO	LED Alerta
+C	GP3	GP2	GP10
+M	GP5	GP4	GP11
+Y	GP7	GP6	GP12
+K	GP9	GP8	GP13
+W	GP11	GP10	GP14
